@@ -41,7 +41,7 @@ class PaymentController extends Controller
         $result = json_decode($result);
         if ($result->status) {
             OrderController::create($request, $amounts, $result->token);
-            $go = "https://pay.ir/pg/$result->token";
+            $go = env('LINK_PAYMENT_GATEWAY').$result->token;
             return successResponse([
                 'url' => $go,
                 'status' => $result->status,
