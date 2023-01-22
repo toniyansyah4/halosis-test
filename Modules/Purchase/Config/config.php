@@ -11,7 +11,7 @@ return [
 
         'pay' => [
             'api' => 'test',
-            'redirect' => 'http://localhost/laravel-api-project/public/payment/verify',
+            'redirect' => 'http://localhost/halosis-test/public/payment/verify',
         ],
 
         /**
